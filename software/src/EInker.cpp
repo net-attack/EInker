@@ -25,7 +25,7 @@ void setup() {
   while(!Serial) {}
 
   // display setup and printing
-  display.init(115200, true, 20, false, *(new SPIClass(VSPI)), SPISettings(4000000, MSBFIRST, SPI_MODE0));
+  display.init(115200, true, 20, false, *(new SPIClass(SPI)), SPISettings(4000000, MSBFIRST, SPI_MODE0));
   display.setRotation(1);
   display.setFullWindow();
   display.firstPage();
@@ -41,7 +41,7 @@ void setup() {
 
   delay(1000);
   Serial.flush();
-  esp_deep_sleep_start();
+  //esp_deep_sleep_start();
 }
 
 void loop() {
