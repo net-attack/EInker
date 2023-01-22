@@ -41,7 +41,7 @@ void setup() {
 
   delay(1000);
   Serial.flush();
-  //esp_deep_sleep_start();
+  ESP.deepSleep(0); 
 }
 
 void loop() {
